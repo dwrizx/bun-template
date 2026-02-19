@@ -15,6 +15,7 @@
     "check": "bun run typecheck && bun run lint && bun run fmt:check",
     "//3": "=== Convenience ===",
     "fix": "bun run lint:fix && bun run fmt",
+    "bench": "bash scripts/bench.sh",
     "prepare": "husky"
   },
   "devDependencies": {
