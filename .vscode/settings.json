@@ -1,0 +1,7 @@
+{
+  "typescript.experimental.useTsgo": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxlint": "always"
+  }
+}

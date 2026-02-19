@@ -1,0 +1,32 @@
+{
+  "name": "bun-template",
+  "private": true,
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "//": "=== Quality Gates ===",
+    "typecheck": "tsgo -p tsconfig.json",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check .",
+    "//2": "=== Bundled Checks ===",
+    "check:fast": "bun run lint && bun run fmt:check",
+    "check": "bun run typecheck && bun run lint && bun run fmt:check",
+    "//3": "=== Convenience ===",
+    "fix": "bun run lint:fix && bun run fmt",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@nkzw/oxlint-config": "^1.0.1",
+    "@types/bun": "latest",
+    "@typescript/native-preview": "^7.0.0-dev.20260218.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "oxfmt": "^0.33.0",
+    "oxlint": "^1.48.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
